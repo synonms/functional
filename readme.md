@@ -1,4 +1,4 @@
-#Synonms.Functional
+# Synonms.Functional
 
 The Functional library is an implementation of the 'Railway' programming paradigm plus some other functional bells and whistles.
 The purpose of the library largely boils down to removing `null` checking and exceptions and adding semantic meaning.
@@ -6,22 +6,22 @@ The purpose of the library largely boils down to removing `null` checking and ex
 While concessions have been made for simplicity, effort has been made to align correctly to functional programming principles.  A useful (if rather mind boggling) post about functional programming which helped shape this library is linked below.
 
 
-##Maybe
+## Maybe
 This type represents an optional value which may or may not be present, much like the Nullable<> type or types suffixed with ?.  
 
-###Purpose
+### Purpose
 - Implicitly perform null checking and prevent null reference exceptions
 
-###Use case
+### Use case
 - Anywhere where null objects are appropriate
 - Where you find yourself using nullable types or performing null checks
 - Where you find yourself throwing exceptions in non-exceptional circumstances to indicate that something was not found
 
-###Notes
+### Notes
  - The underlying value must not be accessed directly as it is unsafe and instead methods like Bind() and Match() are used to safely consume the value if it is present.
  - A common use case for Maybe is to model the result of an action which does not return a value and could fail, using `Maybe<Fault>`.
  
-###Examples
+### Examples
 As well as the constructor you can use the static helper methods `None` and `Some` to create a `Maybe`:
 
 ```c#
@@ -88,19 +88,19 @@ Maybe<string> maybe = TryAndGetSomeInt().Map(someInt => $"Hello, I'm just a regu
 ```
 
 
-##OneOf
+## OneOf
 This type represents a value which may be of one form or another.
 
-###Purpose
+### Purpose
 - Allows the representation of a value which may take one of two different forms
 
-###Use case
+### Use case
 - When you want to represent a value which may be of one form or another, for example when parsing JSON a numeric value could be an `int` or a `decimal`.
 
-###Notes
+### Notes
 - The underlying value must not be accessed directly as it is unsafe and instead methods like Match() are used to conditionally consume the value depending on which form it is.
 
-###Examples
+### Examples
 
 Use `Match` to perform different actions depending on which form the value takes:
 
@@ -112,23 +112,23 @@ oneOf.Match(
 ```
 
 
-##Result
+## Result
 
 The most common form of `OneOf<,>` is that returned by functions where there is either a successful return value or a fault, i.e. `OneOf<TSuccess, Fault>`.  `Result<TSuccess>` is simply the explicit modeling of that form.
 
-###Purpose
+### Purpose
 - Allows the representation of a value which may take one of two different forms, where one form is deemed successful and the other form is a `Fault`
 
-###Use case
+### Use case
 - When you want to represent an operation which can either succeed and return a value or fail in non-exceptional circumstances
 - Where you find yourself throwing exceptions in non-exceptional circumstances to indicate that something failed
 - Where you find yourself explicitly catching/handling exceptions
 
-###Notes
+### Notes
 - 'Non-exceptional circumstances' are defined as situations where it is expected that a failure would happen in everyday use.  An example of this would be the operation "map incoming resource X to domain model Y".  It is a perfectly reasonable scenario that this could be executed with an incoming resource which is not valid as per business rules.  In this case modeling the validation failure(s) with a `Fault` is preferred over throwing an exception.
 - The `Bind` concept is mis-used slightly for ease of use.  Projection functions are applied in the success state only and a new `Result` is created.  In the failure state the existing `Fault` is mapped directly to the returned `Result`. 
 
-###Examples
+### Examples
 As well as the constructor you can use the static helper methods `Success` and `Failure` to create a `Result`:
 
 ```c#
@@ -157,6 +157,6 @@ In the above example if the `int` operation failed `TryAndGetSomeStringUsingAnIn
 
 
 
-##Further reading
+## Further reading
 
 - https://fsharpforfunandprofit.com/posts/elevated-world
