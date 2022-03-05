@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synonms.Functional", "Synonms.Functional\Synonms.Functional.csproj", "{0FFEF9CC-47FB-4CF0-B18B-48528ED372A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synonms.Functional.Tests.Unit", "Synonms.Functional.Tests.Unit\Synonms.Functional.Tests.Unit.csproj", "{556032C3-EC6B-455A-AD1E-F85D482A0384}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FFEF9CC-47FB-4CF0-B18B-48528ED372A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FFEF9CC-47FB-4CF0-B18B-48528ED372A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FFEF9CC-47FB-4CF0-B18B-48528ED372A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FFEF9CC-47FB-4CF0-B18B-48528ED372A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556032C3-EC6B-455A-AD1E-F85D482A0384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556032C3-EC6B-455A-AD1E-F85D482A0384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556032C3-EC6B-455A-AD1E-F85D482A0384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556032C3-EC6B-455A-AD1E-F85D482A0384}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
