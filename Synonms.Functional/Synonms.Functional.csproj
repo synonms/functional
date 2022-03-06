@@ -4,6 +4,16 @@
         <TargetFramework>net5.0</TargetFramework>
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <Authors>Synonms</Authors>
+        <Product>Synonms Functional</Product>
+        <Copyright>2022 Synonms</Copyright>
+        <RepositoryUrl>https://github.com/synonms/functional</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageProjectUrl>https://github.com/synonms/functional</PackageProjectUrl>
+        <PackageTags>Functional;Railway</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Description>Synonms Functional library is an implementation of the 'Railway' programming paradigm plus some other functional bells and whistles.</Description>
+        <PackageVersion>1.0.0</PackageVersion>
     </PropertyGroup>
 
 </Project>
